@@ -1,0 +1,67 @@
+<div class="body_back" ng-class="getActivePlayer_background()">
+
+   <div class="wrapper">
+
+   <div class="div_game_fix">
+
+   <div class="time_section">
+         <div class="row text_left" on-long-press="promptEndingMatch()">
+        <div class="player_info player_info1">
+         <div ng-class="getActivePlayerScoreClass_player1()">
+            <span>{{match.players[0].name}} :</span>
+             <span>{{getPlayer1Points()}}</span>
+        </div>
+        </div>
+        <div class="player_info player_info_time">
+         <span>Time :</span><span id="gameTimer" class="timer" ng-click="togglePause()"></span>
+        </div>
+        <div class="player_info player_info2">
+         <div ng-class="getActivePlayerScoreClass_player2()">
+             <span>{{match.players[1].name}} :</span>
+              <span>{{getPlayer2Points()}}</span>
+        </div>
+        </div>
+   </div>
+   </div>
+  
+   
+    <div class="left_content">
+      <div class="now_playing_section">
+        <h3 class="pull-left">Now Playing:</h3>
+        <div ng-class="getActivePlayerScoreClass()">
+            <h1 class="text_left">
+                <span class="playerName">{{getActivePlayer().name}}</span>
+                <span>:</span>
+                <span class="playerScore">{{getActivePlayerPoints()}}</span>
+            </h1>
+        </div>
+         <div class="btn_place">
+           <a href="JavaScript:void(0);"><div class="made_btn" ng-click="made()">Made</div></a>
+           <a href="JavaScript:void(0);"> <div class="miss_btn" ng-click="missed()">Missed</div></a>
+        </div>
+        <div class="target_div">
+            <a href="JavaScript:void(0);" class="common_btn"><div class="target" ng-show="isTargetAvailable()" ng-click="target()">Target</div></a>
+            <a href="JavaScript:void(0);" class="common_btn"><div class="undo" ng-show="game.commands.length > 0" ng-click="undo()">Undo</div></a>
+        </div>
+    <div class="match_score">
+        <ul class="list-inline">
+            <li class="list-inline-item"> <span>Match Score: {{game.gameNo}}/{{match.numberOfGames}}</span></li>
+            <li class="list-inline-item">  <span>{{match.players[0].name}}</span>
+            <span>:</span>
+            <span>{{match.score[0]}}</span></li>
+            <li class="list-inline-item"> <span>{{match.players[1].name}}</span>
+            <span>:</span>
+            <span>{{match.score[1]}}</span></li>
+        </ul>
+    </div> 
+     </div>
+    </div>
+    <div class="right_content">
+      <div ng-class="getActivePlayerdemo()"></div>
+    </div>
+    
+    </div>
+    </div>
+    
+</div>
+

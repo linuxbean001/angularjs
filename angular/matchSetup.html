@@ -1,0 +1,51 @@
+<div class="body_back1">
+   <div class="wrapper">
+    <div class="details_page">
+   
+    <div class="col-md-12 col-sm-12">
+      <table class="matchSetupTable input-sm">
+    <tr>
+        <td>Player 1 Name</td>
+        <td><input type="text" ng-model="players[0].name" maxlength="15" class="form-control"></td>
+    </tr>
+    <!--  <tr>
+        <td colspan="1">vs</td>
+        <td><span style="font-size: 20px;" ng-click="swapPlayers()">&#x21c5;</span></td>
+    </tr> -->
+     <tr>
+        <td>Player 2 Name</td>
+        <td><input type="text" ng-model="players[1].name"  maxlength="15" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>Game points Player 1</td>
+        <td>
+            <input type="number" min="1" max="100" ng-model="players[0].points" class="form-control number_field">
+        </td>
+    </tr>
+    <tr>
+        <td>Game points Player 2</td>
+        <td>
+            <input type="number" min="1" max="100" ng-model="players[1].points" class="form-control number_field">
+        </td>
+    </tr>
+    <tr>
+        <td>Number of games</td>
+        <td>
+            <input type="number" min="1" max="99" ng-model="match.numberOfGames" class="form-control number_field">
+        </td>
+    </tr>
+    <tr>
+        <td>Game clock</td>
+        <td>
+            <input type="number" min="1" max="60" ng-model="match.gameClock" class="form-control number_field"> minutes
+        </td>
+    </tr>
+</table>
+<div style="margin-top: 10px">
+    <a href="JavaScript:void(0);"><span class="start_first_game" ng-click="startMatch()">Start First Game</span></a>
+</div>
+    </div>
+    
+    </div>
+    </div>
+</div>

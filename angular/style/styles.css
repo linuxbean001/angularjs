@@ -1,0 +1,887 @@
+a {
+    text-decoration: none
+}
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: 'Gotham';
+}
+.view {
+    margin-left: auto;
+    margin-right: auto
+}
+.bigBtn,
+.bigOrangeBtn,
+.divBtn,
+.madeBtn,
+.missedBtn,
+.targetBtn,
+.undoBtn {
+    display: block;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer
+}
+.bigBtn,
+.bigOrangeBtn,
+.madeBtn,
+.missedBtn,
+.targetBtn,
+.undoBtn {
+    font-size: 24px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px
+}
+.bigOrangeBtn {
+    border: 1px solid #c47928;
+    background-color: #e38d2e;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto
+}
+.matchSetup {
+    margin: 30px 10px 0
+}
+.matchSetupTable {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+.matchSetupTable td {
+    padding-bottom: 10px
+}
+.matchSetupTable input {
+    color: #000
+}
+.matchSetupTable input[type=text] {
+    width: 100%
+}
+.matchScoreArea {
+    background-color: #006400;
+    font-size: 24px
+}
+.gameTitleArea {
+    margin-top: 10px
+}
+.gameNo {
+    float: left;
+    font-size: 20px
+}
+.madeBtn {
+    background-color: green;
+    border: 1px solid #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px
+}
+.missedBtn {
+    background-color: red;
+    border: 1px solid #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px
+}
+.targetBtn {
+    background-color: #5d5d5d;
+    border: 1px solid #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px
+}
+.undoBtn {
+    background-color: #c2b261;
+    color: #000;
+    border: 1px solid #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px
+}
+.playerScoreActive {
+    clear: both;
+    font-size: 25px
+}
+.playerScoreActive .playerScore {
+    margin-left: 30px;
+    font-size: 56px
+}
+.playerScoreInactive {
+    padding-top: 5px;
+    margin-top: 0px;
+    height: 50px;
+    
+}
+.gameOver {
+    margin-top: 30px;
+    font-size: 18px
+}
+.matchOver {
+    margin-top: 30px;
+    font-size: 24px
+}
+.timer,
+.timerPaused {
+    color: #fff;
+    font-size: 24px;
+   
+    
+}
+.timerPaused {
+    color: red;
+    font-size: 18px;
+    font-weight: 700
+}
+.shootout {
+    background-color: #140e66
+}
+.gameStats {
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.gameStats table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left
+}
+.gameStats table td {
+    padding: 3px
+}
+.footer {
+    font-size: 10px;
+    font-style: italic;
+    bottom: 2px;
+    height: 20px;
+    margin-top: 40px;
+    text-align: center;
+    vertical-align: middle;
+    position: fixed;
+    width: 100%
+}
+div.background-1 {
+    background: url(../images/perpal_background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* position: fixed;*/
+    
+    height: 638px;
+    width: 998px;
+    margin: 0 auto;
+    font-family: 'Gotham';
+    /*right: 0px;*/
+}
+div.background-2 {
+    background: url(../images/orange_background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* position: fixed;*/
+    
+    height: 638px;
+    width: 998px;
+    margin: 0 auto;
+    font-family: 'Gotham';
+    /*right: 0px;*/
+}
+div.background-3 {
+    background: url(../images/gray_background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* position: fixed;*/
+    
+    height: 638px;
+    width: 998px;
+    margin: 0 auto;
+    font-family: 'Gotham';
+    /*right: 0px;*/
+}
+div.body_back1 {
+    background: url(../images/background_defult.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* position: fixed;*/
+    
+    height: 638px;
+    width: 998px;
+    margin: 0 auto;
+    font-family: 'Gotham';
+    /*right: 0px;*/
+}
+.defult_palyer {
+    font-size: 24px;
+    color: #800080;
+}
+.wrapper {
+    max-width: 70%;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.left_content {
+    width: 90%;
+   /* position: absolute;
+    top: 50%;
+    left: 0;*/
+    transform: translateY(-50%);
+}
+/*.right_content{
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    transform: translateY(-50%);
+}*/
+
+.right_content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    float: right;
+    top: 30%;
+    margin-right: 0px;
+}
+.buttons1 button.made {
+    background-color: green;
+    border: 0px;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-family: 'Gotham';
+}
+.buttons1 button.missed {
+    background-color: red;
+    border: 0px;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-family: 'Gotham';
+}
+.target_div {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+.target {
+    background-color: #000;
+    border: 0px;
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: 'Gotham';
+    
+}
+.undo {
+    background-color: #000;
+    border: 0px;
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-left: 10px;
+    font-family: 'Gotham';
+   
+}
+.text_left {
+    text-align: left
+}
+.buttons1 {
+    padding-top: 80px;
+}
+.buttons2 {
+    padding-top: 40px;
+}
+.matchSetupTable td {
+    padding-bottom: 4px;
+}
+.matchSetupTable input {
+    color: #fff;
+    background: #000;
+}
+.match_score span {
+    font-size: 18px;
+    color: #000;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/gotham-ultra.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+/*------------Raghav------------*/
+
+.matchSetupTable input {
+    font-family: open sans-serif !important;
+    padding: 0 10px;
+}
+.now_play h3 {
+    color: #000;
+}
+.start_first_game {
+    background-color: green;
+    border: 0px;
+    padding: 5px 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-family: 'Gotham';
+    float: left;
+    color: #000;
+    
+}
+.made_btn {
+    background-color: green;
+    border: 0px;
+    padding: 5px 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-family: 'Gotham';
+    float: left;
+    color: #000;
+    width: 180px;
+}
+.next_btn {
+    background-color: green;
+    border: 0px;
+    padding: 5px 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-family: 'Gotham';
+    color: #000;
+    float: left;
+    width: 100%;
+}
+.miss_btn {
+    background-color: red;
+    border: 0px;
+    padding: 5px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-family: 'Gotham';
+    float: left;
+    margin-left: 10px;
+    color: #000;
+    width: 180px;
+}
+.playerScoreBall-1 {
+    color: purple;
+}
+.playerScoreBall-2 {
+    color: #f78416;
+}
+.playerScoreBall-3 {
+    color: #3a3a3a;
+}
+.playerScoreActive .playerScore {
+    margin-left: 10px;
+    font-size: 50px;
+}
+.time_section {
+    position: absolute;
+    top: 125px;
+    width: 100%;
+}
+.shootimg-1 {
+    background: url(../images/shoot.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 0;
+    font-family: 'Gotham';
+    right: 0px;
+}
+.shootimg-2 {
+    background: url(../images/organgeBall.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 0;
+    font-family: 'Gotham';
+    right: 0px;
+}
+.shootimg-3 {
+    background: url(../images/greyBall.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 0;
+    font-family: 'Gotham';
+    right: 0px;
+}
+.match_score {
+    position: absolute;
+    bottom: -212px;
+    text-align: left;
+    width: 100%;
+    /*left: 200px;*/
+}
+
+.match_score .list-inline>li {margin-right: 25px;}
+.details_page{
+    /* margin: 29% 1%; */
+    margin-top: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.div_game_fix{
+    /* margin: 29% 1%; */
+    margin-top: 250px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.back_home .navbar-nav>li {
+    width: 100%;
+}
+.back_home .navbar {
+    width: 100%;
+    float: right;
+    margin-top: 0px;
+}
+    .back_home .navbar-inverse {
+    background-color: transparent !important; 
+    border-color: transparent !important; 
+}
+.back_home .navbar-nav>li>a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.number_field{width: 100px;}
+.now_playing_section h3{font-size: 42px; color: #000;}
+h1 .playerName {font-size: 50px;}
+.btn_place{margin-top: 40px;}
+.player_info_time{padding-top: 5px;
+    margin-top: 0px;
+    height: 50px;}
+.common_btn{float: left; width: 180px;border: 1px solid transparent;}
+.details_page .now_play{color: rgba(25, 25, 22, 0.88);}
+/*------------End Raghav------------*/
+
+/**************************************Home page css*****************************/
+
+.wrap_content {
+    max-width: 100%;
+    overflow: auto;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.menu_content {
+    text-align: right;
+    float: right;
+   padding-top: 80px;
+}
+.logo_content {
+    float: left;
+    margin-top: 45px;
+}
+.navbar-nav {
+    float: right;}
+ul.top_menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+ul.top_menu li {
+    list-style-type: none;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.left_start {
+    width: 55%;
+    position: absolute;
+    top: 63%;
+}
+.left_start button {
+    background: url(../images/btn4);
+    border: none;
+    padding: 3px 30px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 7px;
+    font-family: 'Gotham';
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    letter-spacing: 3px;
+}
+div.back_home {
+    background: url(../images/back-home.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 638px;
+    width: 998px;
+    margin: 0 auto;
+}
+.container_custome {
+    padding: 25px 15px;
+}
+.logo_div{float: left;width: 50%;}
+.menu_div{float: right;width: 50%;padding-top: 61px;}
+.player_info {
+    float: left;
+    width: 30%;
+    font-size: 30px;
+    text-align: center;
+}
+.player_info1 {
+    text-align: left;
+}
+.player_info2 {
+    text-align: right;
+}
+.details_page  .match_score{bottom: -188px;}
+/**************************************Home page css*****************************/
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+     div.body_back1,div.back_home,div.background-1,div.background-2,div.background-3 {
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+     .match_score{bottom: -188px;
+    text-align: left;}
+    .wrapper {
+        max-width: 72%;
+    }
+    .right_content {
+        top: 30%;
+        margin-right: 60px;
+    }
+    .details_page{
+    margin-top: 150px;
+    }
+    .menu_content {padding-top: 20px;}
+
+   
+    .shootimg-1,.shootimg-2,.shootimg-3{height: 200px;
+    width: 200px;
+    right: -60px;
+    }
+    .div_game_fix{margin-top: 250px;}
+}
+/* iPads (portrait) ----------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .wrapper {
+        max-width: 78%;
+    }
+    .right_content {
+        margin-right: 40px;
+        top: 30%;
+    }
+     .details_page{
+    margin-top: 150px;
+    }
+     .menu_content {padding-top: 20px;}
+      div.body_back1,div.back_home,div.background-1,div.background-2,div.background-3 {
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+      .match_score{bottom: -200px;
+    text-align: center;}
+    .player_info {
+    padding: 0 20px;
+    font-size: 20px;
+    }
+    
+   .shootimg-1,.shootimg-2,.shootimg-3{height: 175px;
+    width: 175px;
+    right: -35px;}
+    .div_game_fix{
+    margin-top: 230px;
+    }
+    .timer, .timerPaused {
+    font-size: 16px;
+    }
+    
+}
+/* mobile (landscape) ----------- */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+     div.body_back1,div.back_home,div.background-1,div.background-2,div.background-3 {
+        position: relative;
+        width: 100%;
+        min-height: 320px;
+        height: 100%;
+    }
+    .match_score{bottom: -126px;
+    text-align: left;}
+    .shootimg-1,.shootimg-2,.shootimg-3{height: 110px;
+        width: 110px;
+
+    }
+    .right_content {
+        text-align: right;
+        top: 35%;
+        margin-right: 30px;
+    }
+    .left_content {
+        top: 50%;
+    }
+    .buttons1 {
+        padding-top: 20px;
+    }
+    .buttons1 button.missed,
+    .buttons1 button.made {
+        font-size: 16px;
+    }
+    .buttons1,
+    .buttons2 {
+        padding-top: 20px;
+    }
+    .right_content img {
+        width: 57%;
+    }
+    button.target {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .wrapper {
+        max-width: 81%;
+    }
+    .matchSetupTable {
+    font-size: 12px;
+    }
+     .details_page{
+    margin-top: 65px;
+    }
+    .menu_div {
+     padding-top: 15px;
+    }
+    .player_info span{font-size: 15px;}
+    .playerScoreActive h1{font-size: 36px;}
+    .left_content h3{font-size: 18px;}
+    .playerScoreActive .playerScore {
+        font-size: 28px;
+    }
+    .div_game_fix .made_btn{width: 130px;font-size: 15px;}
+    .div_game_fix .miss_btn{width: 130px;font-size: 15px;}
+    .div_game_fix .undo,.div_game_fix .target {font-size: 15px;}
+    .next_btn {font-size: 15px;}
+    .match_score .list-inline>li {
+    margin-right: 15px;
+    }
+    .matchSetupTable .form-control{height: 20px;}
+    .time_section {
+        top: 45px;
+    }
+    .div_game_fix {
+        margin-top: 126px;
+    }
+     .common_btn{width: 130px;}
+     h1 .playerName {font-size: 25px;}
+     .start_first_game {font-size: 10px;}
+     .target_div,.btn_place{margin-top: 10px;}
+
+     .player_info2 {
+    text-align: center;
+    }
+    .match_score span {font-size: 14px;}
+    .now_playing_section h3{margin-top: 2px; margin-bottom: 2px;}
+} 
+/* mobile (portrait) ----------- */
+
+@media only screen and (max-width: 479px) {
+      div.body_back1,div.background-1,div.background-2,div.background-3 {
+        position: relative;
+        width: 100%;
+        height: 400px;
+    }
+    .match_score{bottom: -168px;
+    text-align: center;}
+    div.back_home{
+         position: relative;
+        width: 100%;
+        height: 500px;}
+    .player_info span {
+    font-size: 12px;
+    }
+    .time_section {
+    top: 90px;
+    }
+    .matchSetupTable .form-control{height: 20px;}
+    .right_content {
+        top: 30%;
+        text-align: right;
+        margin-right: 0px;
+    }
+    .buttons1,
+    .buttons2 {
+        padding-top: 20px;
+    }
+    .right_content img {
+        width: 50%;
+    }
+    button.made,
+    button.target {
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+    .wrapper {
+        max-width: 90%;
+    }
+    .buttons1 button.missed {
+        padding: 4px 9px;
+    }
+    .text_left{font-size: 20px;}
+    .playerScoreActive .playerScore {
+    margin-left: 2px;
+    font-size: 20px;
+    }
+    .div_game_fix .made_btn, .miss_btn,.undo,.target {font-size: 15px; width: 90px;margin-bottom: 10px;}
+    div.shootimg-1, div.shootimg-2, div.shootimg-3 {
+    height: 90px !important;
+    width: 90px !important;
+    }
+    div.body_back1{height: 475px !important;}
+    .match_score .list-inline>li {
+        margin-right: 2px !important;
+    }
+    .match_score span{font-size: 12px;}
+    .next_btn {font-size: 12px;float: left;}
+    .details_page {
+        margin-left:0px;
+        margin-right:0px;
+        margin-top: 110px;
+    }
+    .matchSetupTable {
+    font-size: 12px;
+    }
+    .right_content {
+    margin-right: 20px !important;
+    }
+    .logo_div{float: left;width: 100%;}
+    .menu_div {
+    width: 100%;
+    float: left;
+     padding-top: 30px;
+    }
+
+    .player_info {
+     font-size: 12px;
+     width: 26%;
+    }
+    .playerScoreActive {
+    height: 30px;
+    font-size: 12px;
+    }
+    .timer, .timerPaused {
+    font-size: 12px;
+    }
+    .defult_palyer {
+    font-size: 11px;}
+    .div_game_fix{margin-top: 160px;}
+    .div_game_fix .left_content h3{font-size: 20px;}
+    div.background-1, div.background-2, div.background-3 {
+    height: 424px;
+    }
+    .shootimg-2,.shootimg-3{
+        right: 0px;
+    
+    }
+    .details_page .made_btn{font-size: 12px;}
+    h1 .playerName {font-size: 22px;}
+    .start_first_game {font-size: 12px;}
+    .common_btn {
+    width: 90px;}
+    .btn_place {margin-top: 30px;}
+    .target_div {margin-top: 5px;}
+}
+
+/*@media only screen and (min-width: 668px) and (max-width: 1024px) {
+    .left_content {
+        top: 200px;
+    }
+    div.body_back1,div.back_home,div.background-1,div.background-2,div.background-3 {
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+    .wrapper {
+        overflow-x: hidden;
+    }
+    div.shootimg-1,div.shootimg-2,div.shootimg-3{
+        height: 170px;
+        width: 170px;
+    }
+    div.shootimg-1{
+        right: -2px;
+    }
+    .match_score {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+    .game_no{display: none;}
+    .playerScoreActive {height: 40px;}
+    .match_score .list-inline>li {
+        margin-right: 34px;
+    }
+    .playerScoreActive .playerScore {
+        margin-left: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 667px) {
+
+    div.body_back1,div.back_home,div.background-1,div.background-2,div.background-3 {
+        position: relative;
+        width: 100%;
+        height: 475px;
+    }
+    .wrapper {
+        overflow-x: hidden;
+    }
+    div.shootimg-1,div.shootimg-2,div.shootimg-3{
+        height: 130px;
+        width: 130px;
+    }
+    .match_score {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+    .game_no{display: none;}
+    .playerScoreActive {height: 34px;}
+    .details_page{ margin-top: 150px;}
+    .div_game_fix {
+    margin-top: 230px;
+    margin-left: 0px; }
+    .made_btn,.miss_btn {padding: 5px 5px;margin-top: 15px;}
+    .left_content {
+    width: 100%;}
+    .match_score .list-inline>li {
+    margin-right: auto;
+    }
+    .navbar-nav {
+    float: none;}
+
+
+}*/

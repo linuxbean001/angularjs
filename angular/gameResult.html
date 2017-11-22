@@ -1,0 +1,68 @@
+ <div class="body_back1">
+   <div class="wrapper">
+    <div class="details_page">
+    <div class="col-md-12 col-sm-12">
+      <div class="now_play">
+      <!-- <div class="matchScoreArea">
+        <span>{{match.players[0].name}}</span>
+        <span>{{match.score[0]}}</span>
+        <span>:</span>
+        <span>{{match.score[1]}}</span>
+        <span>{{match.players[1].name}}</span>
+    </div>  -->
+    <div class="gameOver">
+        <span ng-show="winnerIdx < 0">Draw in shootout</span>
+        <span ng-show="winnerIdx >= 0">{{match.players[winnerIdx].name}} wins the game</span>
+        <span ng-show="shutout">with shutout</span>
+    </div>
+    <div class="gameStats">
+        <table>
+            <tr>
+                <td>Game score:</td>
+                <td>{{match.curGame.score[0].curPoints}} : {{match.curGame.score[1].curPoints}}</td>
+            </tr>
+            <tr>
+                <td>Number of Games:</td>
+                <td>{{match.curGame.innings}}</td>
+            </tr>
+           <!--  <tr>
+                <td colspan="2" style="text-align: center; font-weight: bold">High runs</td>
+            </tr> -->
+            <tr>
+                <td>{{match.players[0].name}}:</td>
+                <td>{{match.curGame.score[0].highRun}}</td>
+            </tr>
+            <tr>
+                <td>{{match.players[1].name}}:</td>
+                <td>{{match.curGame.score[1].highRun}}</td>
+            </tr>
+        </table>
+    </div>
+     <a href="JavaScript:void(0);"><span class="next_btn" ng-show="!match.isOver()" ng-click="nextGame()">Next Game</span></a>
+    <div ng-show="match.isOver()">
+        <span class="matchOver" ng-show="match.winner() != null">{{match.winner().name}} wins the match</span>
+        <span class="matchOver" ng-show="match.winner() == null">Tied match</span>
+        <a href="#/matchSetup">
+            <span class="next_btn">Start new match</span>
+        </a>
+    </div>
+       
+    </div>
+    
+    </div>
+     <div class="col-md-12 match_score">
+    <ul class="list-inline">
+        <li class="list-inline-item"> <span>Match Score: {{match.curGame.gameNo}}/{{match.numberOfGames}}</span></li>
+        <li class="list-inline-item">  <span>{{match.players[0].name}}</span>
+        <span>:</span>
+        <span>{{match.score[0]}}</span></li>
+        <li class="list-inline-item"> <span>{{match.players[1].name}}</span>
+        <span>:</span>
+        <span>{{match.score[1]}}</span></li>
+    </ul>
+    </div> 
+    
+    </div>
+    </div>
+    
+</div>
